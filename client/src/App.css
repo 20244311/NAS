@@ -1,0 +1,145 @@
+:root {
+  --bg: #f8fafc;
+  --card: rgba(255, 255, 255, 0.8);
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --text: #1e293b;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0;
+}
+
+.header p {
+  color: var(--text-light);
+}
+
+.card {
+  background: var(--card);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+/* Upload Area */
+.upload-zone {
+  border: 2px dashed var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.upload-zone:hover {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Search */
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: var(--primary);
+}
+
+/* File List */
+.file-list {
+  display: grid;
+  gap: 12px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s;
+}
+
+.file-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-name {
+  font-weight: 600;
+  display: block;
+}
+
+.file-meta {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-hover); }
+
+.btn-ghost { background: transparent; color: var(--text-light); }
+.btn-ghost:hover { background: #f1f5f9; color: var(--text); }
